@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/template.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery.maskedinput.min.js"></script>
+	<script src="jquery-validate.js"></script>
+	
+</head>
+<body>
+	<form class="form" action="#">
+	
+		<input type="text" id="phone" class="field required numeric">
+		<input type="text" id="date" class="field required numeric">
+		<input type="text" id="index" class="field required numeric">
+
+		<button class="submit">sebd</button>
+	</form>
+
+	<script>
+		$(function(){
+			$('#phone').mask("(999) 999-99-99");
+			$('#date').mask("99/99/9999", {placeholder:"дд/мм/год",
+					completed: function(){alert("You typed the following: "+this.val());}
+				});
+
+		});
+		var obj1 = {
+			bredov: 'skotnik',
+			simon: 'sibarit',
+			babuinov: 'ludik'
+		};
+
+		var obj2 = {
+			dedov: 'tormoz',
+			kretinin: 'skotnik',
+			semen: 'prohindey',
+			bredov: 'rabochy'
+		};
+
+		var main = $.extend(obj1, obj2);
+		// console.log(main);
+		
+	</script>
+</body>
+</html>
